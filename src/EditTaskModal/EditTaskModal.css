@@ -1,0 +1,90 @@
+.edit-sidebar {
+  position: fixed;
+  top: 0;
+  right: -400px; 
+  width: 250px;
+  height: 100%;
+  color: #fff;
+  background-color: #050505;
+  transition: right 0.3s ease-in-out;
+  z-index: 999; 
+  cursor: pointer;
+}
+
+.edit-sidebar.open {
+  right: 0; 
+}
+
+.edit-sidebar-content {
+  padding: 20px;
+}
+
+.edit-sidebar h2 {
+  margin: 20px 20px 40px;
+  position: relative;
+}
+
+.form-group {
+  margin-bottom: 25px;
+}
+
+.form-group input[type="text"]
+{
+  color: #fff;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-bottom: 1px solid #504c4c77; 
+  outline: none; 
+  background-color: transparent; 
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  position: relative;
+}
+
+.form-group label::before {
+  content: attr(data-placeholder); 
+  position: absolute;
+  top: -20px; 
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out; 
+}
+
+.form-group input[type="text"]:focus + label::before,
+.form-group input[type="text"]:not(:placeholder-shown) + label::before {
+  opacity: 1;
+}
+
+.form-group textarea {
+  margin-top: 30px;
+  height: 120px; 
+  width: 98%;
+  background-color:#050505;
+  border: 1px solid rgb(18, 117, 156);
+  border-radius: 8px;
+  color: #fff;
+}
+
+.button-group {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  text-align: center;
+}
+
+.button-group button {
+  width: 90%;
+  padding: 15px;
+  background-color: #2C4E76;
+  color: #fff;
+  border: none;
+  bottom: -20px;
+  border-radius: 10px;
+  cursor: pointer;
+}
